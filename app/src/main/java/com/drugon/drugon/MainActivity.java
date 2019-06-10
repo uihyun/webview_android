@@ -8,6 +8,9 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
+/**
+ * Created by Uihyun on 2019. 6. 10.
+ */
 public class MainActivity extends AppCompatActivity {
     private WebView mWebView;
 
@@ -28,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         webSettings.setLoadsImagesAutomatically(true);
         webSettings.setSupportMultipleWindows(false);
 
-        mWebView.setWebViewClient(new WebViewClient() {
+        mWebView.setWebViewClient(new WebViewClient() { // 새창이 뜨지 않게 하기 위함
             @Override
             public boolean shouldOverrideUrlLoading(WebView view, String url) {
                 view.loadUrl(url);
@@ -43,7 +46,5 @@ public class MainActivity extends AppCompatActivity {
         });
 
         mWebView.loadUrl("https://drugon-seller.firebaseapp.com");
-
-//        mWebView.loadUrl("javascript:print('test')");
     }
 }
