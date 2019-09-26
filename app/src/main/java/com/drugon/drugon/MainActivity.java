@@ -45,6 +45,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        mWebView.loadUrl("https://drugon-seller.firebaseapp.com");
+        mWebView.loadUrl("https://drugon-seller.firebaseapp.com/app/home/default");
     }
 }
